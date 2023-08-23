@@ -3,7 +3,7 @@
 
 if(isset($_POST['submit']));
 
-$name=$_POST['fullname'];
+$fname=$_POST['fullname'];
 $email=$_POST['email'];
 $phone=$_POST['phone'];
 $website=$_POST['website'];
@@ -31,14 +31,14 @@ move_uploaded_file($tmp_name,"uploaded/".$name);
 <body class='bg-grid-line'>
     <div class='card'>
     <header>
-        <h1>Skills</h1>
+        <h1>ID card</h1>
     </header>
     <article>
         <img alt='My Pic' id='thumb' src="uploaded/<?php if(isset($_POST['submit'])){ printf($name); }?>">
         <div class='area'>
         <ul>
             <li>
-            Name: <?php echo strtoupper($name); ?>
+            Name: <?php echo strtoupper($fname); ?>
             </li>
             <li>
             Email: <?php echo "$email"; ?>
