@@ -22,13 +22,13 @@
             <input placeholder="Your Phone Number" type="tel" tabindex="3" name="phone" required>
             </fieldset>
             <fieldset>
-            <input placeholder="Your Web Site starts with http://" name="website" type="url" tabindex="4" required>
+            <input placeholder="Your Web Site with https:// " name="website" type="url" tabindex="4" required>
             </fieldset>
             <fieldset>
-            <input placeholder="ID no." name="idcard" type="url" tabindex="5" required>
+            <input placeholder="ID no." name="idcard" type="number" tabindex="5" required>
             </fieldset>
             <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Genarate</button>
             </fieldset>
         </form>
     </div>

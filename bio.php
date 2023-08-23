@@ -1,3 +1,16 @@
+
+<?php 
+
+if(isset($_POST['submit']));
+
+$name=$_POST['fullname'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$website=$_POST['website'];
+$idcard=$_POST['idcard'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,19 +31,19 @@
         <div class='area'>
         <ul>
             <li>
-            Name:
+            Name: <?php echo strtoupper($name); ?>
             </li>
             <li>
-            Email:
+            Email: <?php echo "$email"; ?>
             </li>
             <li>
-            Phone: 
+            Phone:  <?php echo "$phone"; ?>
             </li>
             <li>
-            Website: 
+            Website: <?php echo "$website"; ?>
             </li>
             <li>
-            ID: 
+            ID: <?php echo "$idcard"; ?>
             </li>
         </ul>
 
