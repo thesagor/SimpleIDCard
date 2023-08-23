@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">  
-        <form id="contact" action="bio.php" method="post">
+        <form id="contact" action="bio.php" method="POST">
             <h3>Quick Contact</h3>
             <h4>Contact us today, and get reply with in 24 hours!</h4>
             <fieldset>
@@ -25,7 +25,7 @@
             <input placeholder="Your Web Site with https:// " name="website" type="url" tabindex="4" required>
             </fieldset>
             <fieldset>
-            <input placeholder="ID no." name="idcard" type="number" tabindex="5" required>
+            <input placeholder="ID no." name="idcard" type="tel" tabindex="5" required>
             </fieldset>
             <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Genarate</button>
