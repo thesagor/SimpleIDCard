@@ -9,6 +9,13 @@ $phone=$_POST['phone'];
 $website=$_POST['website'];
 $idcard=$_POST['idcard'];
 
+//print_r($_FILES['imgfile']);
+
+
+$name= $_FILES['imgfile']['name'];
+$tmp_name= $_FILES['imgfile']['tmp_name'];
+move_uploaded_file($tmp_name,"uploaded/".$name);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +34,7 @@ $idcard=$_POST['idcard'];
         <h1>Skills</h1>
     </header>
     <article>
-        <img alt='My Pic' id='thumb' src='https://s.cdpn.io/1202/timpietrusky_on_rampage_small_1.jpg'>
+        <img alt='My Pic' id='thumb' src="uploaded/<?php if(isset($_POST['submit'])){ printf($name); }?>">
         <div class='area'>
         <ul>
             <li>
