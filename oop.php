@@ -10,26 +10,23 @@
 */
 
 //clss
-class MATH{
+class Math{
     //properties
-    public $a, $b, $c;
+    public $a, $b, $x;
 
-    //constructor
-    public function __construct($a, $b) {
+    //construct
+    public function __construct($a,$b) {
         $this->a = $a;
         $this->b = $b;
     }
-    
 
-    //methods
-    function sumSet(){
-        $this->c=$this->a+$this->b;
-        return $this->c;      
+    //function
+    function sum(){
+        $this->x= $this->a+ $this->b;
+        return $this->x;
     }
     
 }
 
-//object
-$sum= new MATH(30,23);
-echo $sum->sumSet();
-
+$mathkor= new Math(20,30);
+echo $mathkor->sum();
