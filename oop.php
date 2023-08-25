@@ -9,17 +9,22 @@
     -> access modifier
 */
 
+//clss
 class myClass{
-    public $x=20, $y=20, $z;
-    public function classFunction(){
-        $this->z= $this->x+$this->y;
-        return $this->z;
+    //propertes
+    public $name,$weight, $color;
+
+    //method
+    function set_name($name){
+        $this->name=$name;
+    }
+    function get_name(){
+        return $this->name;
     }
 }
+//Object
 
-$sum= new myClass();
+$amra= new myClass();
+$amra->set_name('vitamin c');
+echo $amra->get_name();
 
-$sum->x=20;
-$sum->y=50;
-
-echo $sum->classFunction();
