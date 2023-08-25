@@ -10,31 +10,22 @@
 */
 
 //clss
-class vitamin {
-    //proerties
-    public $banana, $apple, $mango;
+class MATH{
+    //properties
+    public $a, $b, $c;
 
-    //method
-    function setVit($banana){
-        $this->banana=$banana;
-    }
+    //methods
 
-    function setVitapple($apple){
-        $this->apple=$apple;
+    function sumSet($a,$b){
+        $this->c=$a+$b;        
     }
-
-    function checkvit(){        
-        return $this->banana;
-    }
-    function checkvitapple(){        
-        return $this->apple;
+    function sumSow(){
+        return $this->c;
     }
 }
 
-$check = new vitamin();
-$check->setVit("kola is vitamin phosphet \n");
-$check->setVitapple("apple is vitamin A \n");
-
-echo $check->checkvitapple();
-echo $check->checkvit();
+//object
+$sum= new MATH();
+$sum->sumSet(20,30);
+echo $sum->sumSow();
 
