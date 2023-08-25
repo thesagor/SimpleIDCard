@@ -9,24 +9,33 @@
     -> access modifier
 */
 
-//clss
-class Math{
-    //properties
-    public $a, $b, $x;
+// clss
+class MyClass{
+    //Properties
+    public $name, $n;
 
-    //construct
-    public function __construct($a,$b) {
-        $this->a = $a;
-        $this->b = $b;
-    }
-
-    //function
-    function sum(){
-        $this->x= $this->a+ $this->b;
-        return $this->x;
-    }
+    /*construct
+    public function __construct($name,$n) {
+        $this->name = $name;
+    } */
     
+
+    //method
+    function Dname($name){
+        echo "Hello All, I am $name";        
+    }
+
+    function factorial($n){
+        if($n<=1){
+            return 1;
+        }else{
+            return $n*$this->factorial($n-1);
+        }
+    }
 }
 
-$mathkor= new Math(20,30);
-echo $mathkor->sum();
+$name= new MyClass();
+echo $name->Dname("Scott\n");
+
+$fact=new MyClass();
+echo $fact->factorial(5);
