@@ -38,4 +38,14 @@ $name= new MyClass();
 echo $name->Dname("Scott\n");
 
 $fact=new MyClass();
-echo $fact->factorial(5);
+echo $fact->factorial(5)."\n";
+
+
+
+$subject= ["english", "bangla", "ict", "science", "Biology"];
+sort($subject);
+foreach ($subject as $key => $value) {
+    
+    echo "[$key] => $value\n";
+}
+
