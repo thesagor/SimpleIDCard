@@ -10,21 +10,22 @@
 */
 
 //clss
-class myClass{
-    //propertes
-    public $name,$weight, $color;
+class vitamin {
+    //proerties
+    public $banana, $apple, $mango;
 
     //method
-    function set_name($name){
-        $this->name=$name;
+
+    function setVit($banana){
+        $this->banana=$banana;
     }
-    function get_name(){
-        return $this->name;
+
+    function checkvit(){        
+        return $this->banana;
     }
 }
-//Object
 
-$amra= new myClass();
-$amra->set_name('vitamin c');
-echo $amra->get_name();
+$banana = new vitamin();
+$banana->setVit("vitamin phosphet");
+echo $banana->checkvit();
 
