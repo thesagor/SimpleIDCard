@@ -20,14 +20,24 @@ class MyClass{
     }
 
     //methods
-    function kola(){
+    public function kola(){
         echo "Kolar color hosse {$this->color} and vitamin hosse {$this->vitamin}";
     }
 }
 
 //Object
-$kola= new MyClass("Holud","A+");
+$kola= new MyClass("Holud","A+ \n");
+echo $kola->kola();
 echo "\n";
+
+class kolar extends MyClass{
+    function kola(){
+        return "This is override kola \n";
+    }
+}
+
+$kolas= new kolar("nai", "D");
+echo $kolas->kola();
 
 class amrclass extends MyClass{
     function apple(){
