@@ -11,41 +11,20 @@
 
 // clss
 class MyClass{
-    //Properties
-    public $name, $n;
+    public $color, $vitamin;
 
-    /*construct
-    public function __construct($name,$n) {
-        $this->name = $name;
-    } */
-    
-
-    //method
-    function Dname($name){
-        echo "Hello All, I am $name";        
+    //construct
+    public function __construct($color, $vitamin) {
+        $this->color = $color;
+        $this->vitamin = $vitamin;
     }
 
-    function factorial($n){
-        if($n<=1){
-            return 1;
-        }else{
-            return $n*$this->factorial($n-1);
-        }
+    //methods
+    function kola(){
+        echo "Kolar color hosse {$this->color} and vitamin hosse {$this->vitamin}";
     }
 }
 
-$name= new MyClass();
-echo $name->Dname("Scott\n");
-
-$fact=new MyClass();
-echo $fact->factorial(5)."\n";
-
-
-
-$subject= ["english", "bangla", "ict", "science", "Biology"];
-sort($subject);
-foreach ($subject as $key => $value) {
-    
-    echo "[$key] => $value\n";
-}
-
+//Object
+$kola= new MyClass("Holud","A+");
+echo $kola->kola();
