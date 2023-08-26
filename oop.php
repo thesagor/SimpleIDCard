@@ -27,4 +27,13 @@ class MyClass{
 
 //Object
 $kola= new MyClass("Holud","A+");
-echo $kola->kola();
+echo "\n";
+
+class amrclass extends MyClass{
+    function apple(){
+        return "Appple er color hosse {$this->color} and apple er vitamin {$this->vitamin}";
+    }
+}
+
+$apple= new amrclass("lal", "AAA");
+echo $apple->apple();
