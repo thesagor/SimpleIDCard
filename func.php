@@ -1,13 +1,5 @@
 
 <?php
-    class constClass{
-        const name= "I am sagor ahmed";
-        public $nameT= "This is taskia";
+const sagor= "Sagor is a web developer and he is 24 years old";
 
-        public function user(){
-            echo self::name;
-        }
-    }
-
-    $newname= new constClass();
-    $newname->user();
+echo self::sagor;
