@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="asset/normalize.css">
 </head>
 <body>
-    <div class="head">
-        <div class="h2">
-            <?php
-                echo "My first PHP script!";
-            ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-50 col-offset-20">
+                <form action="" method="POST">
+                    <label for="name" > Name: </label>
+                        <input type="text" name="name">
+                    <label for="email">Email:</label>
+                        <input type="text" name="email">
+                    
+                </form>
+            </div>
         </div>
     </div>
 </body>
