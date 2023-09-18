@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PHP Learning</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
@@ -12,11 +12,15 @@
     <div class="container">
         <div class="row">
             <h3>PHP output</h3>
-            <pre> <?php if(isset($_GET['submit'])):
-             echo $_GET['name']; ?></pre> 
+            <pre> <?php
+            $fname= $_REQUEST['name'];
+            $mail= $_GET['mail'];
+            
+            if(isset($_GET['submit']) && !empty($fname && $mail)):
+             echo $fname; ?></pre> 
 
              <pre>
-                <?php echo $_GET['mail']; endif; ?>
+                <?php echo $mail; endif; ?>
              </pre>
 
         </div>
