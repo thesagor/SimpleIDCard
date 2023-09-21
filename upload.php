@@ -1,13 +1,9 @@
-<?php
-    include_once "asset/functions.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP in select form</title>
+    <title>PHP in upload form</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
@@ -18,24 +14,17 @@
 <body>
     <div class="container">
         <div class="row">
-
-            <?php
-            if(isset($_REQUEST['submit'])){
-                $fruits= $_REQUEST['selectfruits'];
-            }
-
-            ?>
             <div class="column column-50 column-offset-20">
-                <h3>working with select fornm</h3>
                 <form action="" method="POST">
-                    <label for="select">Select your fruits</label>
-                    <select name="selectfruits" id="fruits">
-                        <option value="Selectform"> Select Your form</option>
-                        <option value="mango"> Mango</option>
-                        <option value="orange"> Orange</option>
-                        <option value="banana"> Banana</option>
-                        <option value="pineapple"> Pineapple</option>
-                    </select>
+                    <label for="fname" class="label-inline">First name</label>
+                    <input type="text" name="fname" id="fname">
+
+                    <label for="email" class="label-inline">First name</label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="pphoto"></label>
+                    <input type="file" name="photo" id="pphoto">
+
                     <input type="submit" value="submit" name="submit">
                 </form>
             </div>
