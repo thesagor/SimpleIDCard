@@ -25,7 +25,7 @@
                     <label for="pphoto"></label>
                     <input type="file" name="photo" id="pphoto">
 
-                    <input type="submit" value="submit" name="submit">
+                    <input type="submit" value="submit" name="submitBtn">
                 </form>
             </div>
         </div>
