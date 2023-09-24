@@ -1,3 +1,9 @@
+<?php
+    if($_FILES['photo']['type']=='image/png'){
+        move_uploaded_file($_FILES['photo']['tmp_name'], 'uploaded/'.$_FILES['photo']['name']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +21,21 @@
     <div class="container">
         <div class="row">
             <div class="column column-50 column-offset-20">
-                <form action="" method="POST">
+                <pre>
+                    <code>
+                        <?php 
+                            print_r($_POST);
+                            print_r($_FILES);
+                        
+                        ?>
+                    </code>
+                </pre>
+
+                <form action="" method="POST" enctype="multipart/form-data">
                     <label for="fname" class="label-inline">First name</label>
                     <input type="text" name="fname" id="fname">
 
-                    <label for="email" class="label-inline">First name</label>
+                    <label for="email" class="label-inline">Email</label>
                     <input type="email" name="email" id="email">
 
                     <label for="pphoto"></label>
@@ -28,7 +44,7 @@
                     <input type="submit" value="submit" name="submitBtn">
                 </form>
             </div>
-        </div>
+        </div>        
     </div>
 </body>
 </html>
