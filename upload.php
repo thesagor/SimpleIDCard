@@ -1,7 +1,24 @@
+
+
 <?php
-    if($_FILES['photo']['type']=='image/png'){
-        move_uploaded_file($_FILES['photo']['tmp_name'], 'uploaded/'.$_FILES['photo']['name']);
-    }
+    $typecheck=array(
+        'image/png',
+        'image/jpg',
+        'image/jpeg'
+    );
+    
+    
+        $number= count($_FILES['photo']['name']);
+        for($i=0; $i<$number; $i++){
+
+            if(in_array($_FILES['photo']['type'][$i],$typecheck) !==false && $_FILES['photo']['size'][$i]<5*1024*1024){
+            move_uploaded_file($_FILES['photo']['tmp_name'][$i], "./uploaded/" .$_FILES['photo']['name'][$i]);
+            }
+        }
+
+   /* if(in_array($_FILES['photo']['type'],$typecheck) !==false && $_FILES['photo']['size']<5*1024*1024){
+        move_uploaded_file($_FILES['photo']['tmp_name'], "./uploaded/" .$_FILES['photo']['name']);
+    } */
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +56,9 @@
                     <input type="email" name="email" id="email">
 
                     <label for="pphoto"></label>
-                    <input type="file" name="photo" id="pphoto">
+                    <input type="file" name="photo[]" id="photo1">
+                    <input type="file" name="photo[]" id="photo2">
+                    <input type="file" name="photo[]" id="photo3">
 
                     <input type="submit" value="submit" name="submitBtn">
                 </form>
